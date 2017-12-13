@@ -20,7 +20,6 @@ $ ->
   $.ajax("/example2/initMTable").done (js) ->
     #eval(js) the code is already evaled
     renderTabExample2()
-
   $("#add").click (e) ->
     addValue = $('#name')[0].value
     $.ajax("/example2/addData/"+addValue+"/"+localStorage.getItem("mTableArrayExample2MainMenu")).done (js) ->

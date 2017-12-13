@@ -1,0 +1,9 @@
+this.sayCoucou = function() {
+  return alert("coucou");
+};
+
+$(function() {
+  return $("#mytest").click(function(e) {
+    return alert("bonjour il est <%= Time.new %>");
+  });
+});
