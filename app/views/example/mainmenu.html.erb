@@ -1,6 +1,8 @@
 mainmenu
 
+<div id="renderpeople">
 <%= render partial: "mypeople", collection: @peoples, as: :people %>
+</div>
 
 <button onclick="paintIt(this, '#990000')" class="waves-effect waves-light btn">button</button>
 <div id="results"></div>
