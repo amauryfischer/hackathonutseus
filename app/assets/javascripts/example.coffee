@@ -13,7 +13,7 @@
 
 @renderTab = () ->
   $("#output").html("") #clean html
-  JSON.parse(localStorage.getItem("arrayJson")).forEach (element, i)  =>
+  JSON.parse(localStorage.getItem("arrayJson")).forEach (element, i)  ->
       $("#output").append('<a class="collection-item">' + element + '</a>')
 
 

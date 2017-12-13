@@ -1,0 +1,27 @@
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://coffeescript.org/
+
+@renderTabExample2 = () ->
+  $("#mTableExample2MainMenu").html("") #clean mTable
+  mTableArrayExample2MainMenu = JSON.parse(localStorage.getItem("mTableArrayExample2MainMenu"))
+  if mTableArrayExample2MainMenu?
+    mTableArrayExample2MainMenu.forEach (element, i) ->
+      $("#mTableExample2MainMenu").append('<a class="collection-item">' + element + '<button data-id="' + i + '" class="btnSupprExample2 btn red waves-effect waves-light right center"><i class="fa fa-times" aria-hidden="true"></i></button></a>')
+    $(".btnSupprExample2").click (e) ->
+      id = $(this).data("id")
+      $.ajax("/example2/removeData/"+id+"/"+localStorage.getItem("mTableArrayExample2MainMenu")).done (js) ->
+        #eval(js) the code is already evaledk
+
+
+
+$ ->
+  #init
+  $.ajax("/example2/initMTable").done (js) ->
+    #eval(js) the code is already evaled
+    renderTabExample2()
+
+  $("#add").click (e) ->
+    addValue = $('#name')[0].value
+    $.ajax("/example2/addData/"+addValue+"/"+localStorage.getItem("mTableArrayExample2MainMenu")).done (js) ->
+      #eval(js) the code is already evaledk
