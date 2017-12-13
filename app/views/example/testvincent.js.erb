@@ -1,1 +1,4 @@
-$("#renderpeople").html("<%= escape_javascript(render partial: 'mypeople', collection: @peoples, as: :people) %>");
+//$("#renderpeople").html("<%= escape_javascript(render partial: 'mypeople', collection: @peoples, as: :people) %>");
+localStorage.setItem("arrayJson",decodeURI('<%= escape_javascript(@arrayJson) %>'));
+//myAlert();
+renderTab();

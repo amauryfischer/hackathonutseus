@@ -1,7 +1,7 @@
 mainmenu
 
-<div id="renderpeople">
-<%= render partial: "mypeople", collection: @peoples, as: :people %>
+<div id="renderpeople" class="collection">
+  <%= render partial: "mypeople", collection: @peoples, as: :people %>
 </div>
 
 <button onclick="paintIt(this, '#990000')" class="waves-effect waves-light btn">button</button>
@@ -16,3 +16,5 @@ mainmenu
 
 <button id="vincentsend" class="waves-effect waves-light btn">secondButton</button>
 <div id="vincent"></div>
+
+<div id="output" class="collection"></div>

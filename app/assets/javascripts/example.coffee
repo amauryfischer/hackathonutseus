@@ -8,7 +8,20 @@
   if textColor?
     element.style.color = textColor
 
+@myAlert = () ->
+  alert "sayBouh"
+
+@renderTab = () ->
+  $("#output").html("") #clean html
+  JSON.parse(localStorage.getItem("arrayJson")).forEach (element, i)  =>
+      $("#output").append('<a class="collection-item">' + element + '</a>')
+
+
+arrayJson = ["amaury","vincent","matthieu"]
+localStorage.setItem("arrayJson",JSON.stringify(arrayJson))
 $ ->
+  renderTab()
+
   $("a[data-background-color]").click (e) ->
     e.preventDefault()
 
@@ -26,5 +39,5 @@ $ ->
 
   $("#vincentsend").click (e) ->
     e.preventDefault()
-    $.ajax("/example/testvincent").done (js) ->
-      eval(js)
+    $.ajax("/example/testvincent/"+localStorage.getItem("arrayJson")).done (js) ->
+      #eval(js) the code is already evaled

@@ -9,8 +9,9 @@ class ExampleController < ApplicationController
   end
 
   def testvincent
-    @coucou = "say salut"
-    @peoples = ["bebere"]
+    @arrayJson = JSON.parse params["array"]
+    @arrayJson.push("bebere")
+    @arrayJson = URI.encode @arrayJson.to_json
     respond_to do |format|
       format.js
     end
