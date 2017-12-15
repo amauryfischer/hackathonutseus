@@ -15,4 +15,9 @@ Rails.application.routes.draw do
   #example leaflet
   get '/leafletview/addMarker' => "mapview#addMarker"
   get '/leafletview' => "mapview#mainview"
+
+  #hackathon real routes
+  get '/home' => "home#mainpage"
+  get '/' => redirect("/home")
+  get "*path" => redirect("/home")
 end
