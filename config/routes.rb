@@ -17,7 +17,8 @@ Rails.application.routes.draw do
   get '/leafletview' => "mapview#mainview"
 
   #hackathon real routes
-  get '/home' => "home#mainpage"
+  get '/home' => "home#realhome"
+  get '/map' => "home#mainpage"
   get '/home/fetchflat' => "home#fetchflat"
 
 

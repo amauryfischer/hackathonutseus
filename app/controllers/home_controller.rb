@@ -3,6 +3,10 @@ class HomeController < ApplicationController
     render template: "home/mainmenu"
   end
 
+  def realhome
+    render template: "home/realhome"
+  end
+
   def fetchflat
     respond_to do |format|
       format.js
