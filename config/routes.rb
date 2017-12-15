@@ -11,4 +11,8 @@ Rails.application.routes.draw do
   get '/example2/addData/:addValue/:mTableArrayExample2MainMenu' => "example2#addValue"
   get '/example2/removeData/:id/:mTableArrayExample2MainMenu' => "example2#removeData"
   get '/example2' => "example2#mainmenu"
+
+  #example leaflet
+  get '/leafletview/addMarker' => "mapview#addMarker"
+  get '/leafletview' => "mapview#mainview"
 end

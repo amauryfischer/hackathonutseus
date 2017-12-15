@@ -7,7 +7,7 @@
   mTableArrayExample2MainMenu = JSON.parse(localStorage.getItem("mTableArrayExample2MainMenu"))
   if mTableArrayExample2MainMenu?
     mTableArrayExample2MainMenu.forEach (element, i) ->
-      $("#mTableExample2MainMenu").append('<a class="collection-item">' + element + '<button data-id="' + i + '" class="btnSupprExample2 btn red waves-effect waves-light right center"><i class="fa fa-times" aria-hidden="true"></i></button></a>')
+      $("#mTableExample2MainMenu").append('<a style="width:100%" class="container collection-item">' + element + '<button data-id="' + i + '" class="btnSupprExample2 btn red waves-effect waves-light right center"><i class="fa fa-times" aria-hidden="true"></i></button></a>')
     $(".btnSupprExample2").click (e) ->
       id = $(this).data("id")
       $.ajax("/example2/removeData/"+id+"/"+localStorage.getItem("mTableArrayExample2MainMenu")).done (js) ->

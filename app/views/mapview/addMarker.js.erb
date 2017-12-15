@@ -1,0 +1,26 @@
+json = <%=
+  a = []
+  80.times {
+    a.push [Random.new.rand*0.1 + 51.45,Random.new.rand*0.1 + -0.16]
+  }
+  a.to_json
+%>
+json2 = <%=
+  require 'csv'
+  file = File.open("public/UTSEUS-anjuke-real-estate-baoshan.csv")
+  output = file.read
+  file.close
+  parsed = CSV.parse output
+  parsed.shift
+  json = []
+  parsed[0..10].each { |point|
+    lat = point[3]
+    lng = point[2]
+    json.push([lat.to_f,lng.to_f])
+  }
+  json
+%>
+json2.forEach(function(element, i) {
+  return L.marker(element).addTo(this.mymap)
+});
+alert("<%= @sayCoucou %>")
