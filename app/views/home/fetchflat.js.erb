@@ -1,0 +1,15 @@
+json = '<%=
+  flats = Flat.all[0..5]
+  URI.encode flats.to_json
+%>';
+json = JSON.parse(decodeURI(json));
+json.forEach(function(element, i) {
+  return L.marker([element.latitude,element.longitude]).bindPopup(
+    '<div class="collection">'+
+    '<div class="collection-item">'+"address : "+element.address+'</div>'+
+    '<div class="collection-item">'+"price : "+element.price+'</div>'+
+    '<div class="collection-item">'+"surface : "+element.surface+'</div>'+
+    '<div class="collection-item">'+"bedroom : "+element.bedroom+'</div>'+
+    '</div>'
+  ).addTo(this.map)
+});

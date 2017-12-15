@@ -18,6 +18,9 @@ Rails.application.routes.draw do
 
   #hackathon real routes
   get '/home' => "home#mainpage"
+  get '/home/fetchflat' => "home#fetchflat"
+
+
   get '/' => redirect("/home")
   get "*path" => redirect("/home")
 end
