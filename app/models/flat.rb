@@ -2,7 +2,7 @@ require 'csv'
 
 class Flat < ApplicationRecord
   def self.integrate_csv
-    file = File.open("/home/amauey/Bureau/Urban Data Hackathon/UTSEUS-anjuke-real-estate.csv")
+    file = File.open("data/UTSEUS-anjuke-real-estate.csv")
     csv = file.read
     file.close
     csv_parsed = CSV.parse csv

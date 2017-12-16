@@ -31,12 +31,12 @@ class Victorizateur < ApplicationRecord
   end
 
   def self.use_ginger
-    file = File.open("/home/amauey/hackathonutseus/data/lieux_subway.csv")
+    file = File.open("data/lieux_subway.csv")
     csv = file.read
     file.close
     parsed_csv = CSV.parse csv
     output = self.ginger parsed_csv
-    file = File.open("/home/amauey/hackathonutseus/data/grid100output.json","w")
+    file = File.open("data/grid100output.json","w")
     file.write output.to_json
     file.close
   end
@@ -55,7 +55,7 @@ class Victorizateur < ApplicationRecord
       end
       new_csv.push(new_line)
     end
-    file = File.open("/home/amauey/hackathonutseus/data/lieux_subway_output.csv","w")
+    file = File.open("data/lieux_subway_output.csv","w")
     file.write parsed_csv.to_csv
     file.close
     new_csv
@@ -67,7 +67,7 @@ class Victorizateur < ApplicationRecord
     @max_lng = 121.1
     @min_lng = 121.5
     @distance = 80
-    parsed_csv = clean_csv "/home/amauey/hackathonutseus/data/lieux_subway.csv"
+    parsed_csv = clean_csv "data/lieux_subway.csv"
     selected_area = []
     parsed_csv.each do |line|
       selected_area.push([line[0],line[1]]) if line[2].to_i >= zoom

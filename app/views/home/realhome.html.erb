@@ -1,187 +1,314 @@
-<style>
-  /*scroll effect*/
-  .navbar-trans {
-    background-color: transparent;
-    border: none;
-    transition: top 1s ease;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hackathon UTSEUS 2017</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-  /*double row*/
-  .navbar-doublerow > .navbar {
-    display: block;
-    padding: 0 auto;
-    margin: 0 auto;
-    min-height: 25px;
-  }
-  .navbar-doublerow .nav {
-    padding: 0 auto;
-  }
-  .navbar-doublerow .dividline {
-    margin: 5px 100px;
-    padding-top: 1px;
-    background-color: inherit;
-  }
-  /*top nav*/
-  .navbar-doublerow .navbar-top ul > li > a {
-    padding: 10px auto;
-    font-size: 12px;
-  }
-  /*down nav*/
-  .navbar-doublerow .navbar-down .navbar-brand {
-    padding: 0 auto;
-    float: left;
-    color: #fff;
-    font-size: 32px;
-  }
-  .navbar-doublerow .navbar-down ul > li > a {
-    font-size: 16px;
-    color: #fff;
-    transition: border-bottom 0.2s ease-in , transform 0.2s ease-in-out;
-  }
-  .navbar-doublerow .navbar-down ul > li > a:hover {
-    border-bottom: 1px solid #fff;
-    color: #fff;
-  }
-  .navbar-doublerow .navbar-down .dropdown {
-    padding: 5px;
-    color: #000;
-  }
-  .navbar-doublerow .navbar-down .dropdown ul > li > a,
-  .navbar-doublerow .navbar-down .dropdown ul > li > a:hover {
-    color: #000;
-    border-bottom: none;
-  }
-  .navbar-doublerow.navbar-trans.afterscroll {}
-  .navbar-doublerow.navbar-trans.afterscroll {
-    top: -50px;
-  }
+  <!-- Favicons -->
+  <link href="img/logoo.png" rel="icon">
+  <link href="img/logoo.png" rel="apple-touch-icon">
 
-  .flex-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  .flex-item {}
-  /*text*/
-  .text-white,
-  .text-white-hover:hover {
-    color: #fff!important;
-  }
-  /*fontcolor*/
-  .light-grey {
-    color: #000!important;
-    background-color: #E6E9ED!important;
-  }
-</style>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
 
-<script>
-  // toggle class scroll
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 50) {
-      $('.navbar-trans').addClass('afterscroll');
-    } else {
-      $('.navbar-trans').removeClass('afterscroll');
-    }
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  });
-</script>
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
 
-<nav class="blue navbar navbar-default navbar-doublerow navbar-trans navbar-fixed-top">
-  <!-- down nav -->
-  <nav class="blue navbar navbar-down">
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Regna
+    Theme URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
     <div class="container">
-      <div class="flex-container">
-        <ul class="nav navbar-nav flex-item hidden-xs">
-          <li>
-            <a href="#">Projects</a>
-          </li>
-          <li>
-            <a href="#">Pricing</a>
-          </li>
-          <li>
-            <a href="#">TheTeam</a>
-          </li>
+
+      <div id="logo" class="pull-left">
+        <a href="#hero"><img src="img/logo.png" alt="Date your Home" title="" width="100" height="100" /></img></a>
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!--<h1><a href="#hero">Regna</a></h1>-->
+      </div>
+
+      <nav style="position: absolute;color:rgba(238,110,115,0);background-color:transparent;box-shadow:none" id="nav-menu-container">
+        <ul id="amaury" class="right nav-menu">
+          <li class="menu-active"><a href="#hero">Home</a></li>
+          <li><a href="#profile">window</a></li>
+          <li><a href="#window">Profile</a></li>
         </ul>
-        <!-- dropdown only moblie -->
-        <div class="dropdown visible-xs pull-right">
-          <button class="btn btn-default dropdown-toggle " type="button" id="dropdownmenu" data-toggle="dropdown">
-            <span class="glyphicon glyphicon-align-justify"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li>
-              <a href="#">Projects</a>
-            </li>
-            <li>
-              <a href="#">Pricing</a>
-            </li>
-            <li>
-              <a href="#">TheTeam</a>
-            </li>
-            <li role="separator" class="divider"></li>
-            <li>
-              <a href="#">contact us</a>
-            </li>
-          </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Hero Section
+  ============================-->
+  <section id="hero">
+    <div class="hero-container">
+      <h1>Date your home</h1>
+<!--<h2>We are team of talanted designers making websites with Bootstrap</h2>-->
+      <a href="#profile" class="btn-start">Start</a>
+      <a href="login.html" class="btn-login">Login</a>
+    </div>
+  </section><!-- #hero -->
+
+  <main id="main">
+
+    <!--==========================
+      Profile Section
+    ============================-->
+    <section id="profile">
+      <div class="container">
+        <div class="row about-container">
+
+          <div class="col-lg-6 content order-lg-1 order-2">
+            <h2 class="title">Complete your profile</h2>
+
+<p><h2>Please answer these following questions : </h2></p >
+
+<p>
+  1. Select your price range :<br>
+  <select name="price">
+<option value="Very cheap">Very cheap</option>
+<option value="Cheap">Cheap</option>
+<option value="Normal">Normal</option>
+<option value="Expensive">Expensive</option>
+<option value="Very expensive">Very expensive</option>
+</select>
+</p >
+<p>
+  2.What kind of housing are you looking for?<br>
+    <select name="housing">
+  <option value="T1">T1</option>
+  <option value="T2">T2</option>
+  <option value="T3">T3</option>
+  <option value="T4">T4</option>
+  <option value="T5">T5</option>
+  <option value="T6">T6</option>
+  <option value="House">House</option>
+  </select>
+</p >
+<p>
+  3.What surface would you like ?<br>
+  <select name="Surface">
+  <option value="<10m²"><10m²</option>
+  <option value="[10m²; 20m²]">[10m²; 20m²]</option>
+  <option value="[20m²; 50m²]">[20m²; 50m²]</option>
+  <option value="[50m²; 100m²]">[50m²; 100m²]</option>
+  <option value="[100m²; 150m²]">[100m²; 150m²]</option>
+  <option value="[150m²; 200m²]">[150m²; 200m²]</option>
+  <option value="[200m²; 300m²]">[200m²; 300m²]</option>
+  <option value="[>300m²]">[>300m²]</option>
+  </select>
+</p >
+<p>
+  <input type="submit"/>
+</p>
+
+
+          </div>
+
+          <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight"></div>
+        </div>
+
+      </div>
+    </section><!-- #profile -->
+
+    <!--==========================
+      window Section
+    ============================-->
+    <section id="window">
+      <div class="container">
+        <div class="row about-container">
+          <div class="col-lg-6 content order-lg-1 order-2">
+            <h2 class="title">What is the window ?</h2>
+            <p class="description"> The window is an interactive map where you can find the places that match with your profile.</p>
+          </div>
+          <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight"></div>
+        </div>
+
+      </div>
+    </section><!-- #window -->
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about">
+      <div class="container">
+        <div class="row about-container">
+
+          <div class="col-lg-6 content order-lg-1 order-2">
+            <h2 class="title">Few Words About Us</h2>
+            <p>
+                We are a team of 7 students from differents universities, our backgrounds have allow us to create this website during the Hackathon organized by the UTSEUS in december 15th and 16th.
+            </p>
+
+            <div class="icon-box wow fadeInUp">
+              <div class="icon"><i class="fa fa-shopping-bag"></i></div>
+              <h4 class="title"><a href="">Business Model</a></h4>
+              <p class="description">Blabla blabla blabla blabla blabla.</p>
+            </div>
+
+            <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa fa-photo"></i></div>
+              <h4 class="title"><a href="">Design</a></h4>
+              <p class="description">Our solution have been designed for a lambda-customer with no specific knowledge in data-science</p>
+            </div>
+
+            <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+              <div class="icon"><i class="fa fa-bar-chart"></i></div>
+              <h4 class="title"><a href="">Data-science</a></h4>
+              <p class="description">We are able to provide some interesting place thanks to data-science</p>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight"></div>
+        </div>
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h3 class="section-title">Contact</h3>
+          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
         </div>
       </div>
+
+      <div id="google-map" data-latitude="40.713732" data-longitude="-74.0092704"></div>
+
+      <div class="container wow fadeInUp">
+        <div class="row justify-content-center">
+
+          <div class="col-lg-3 col-md-4">
+
+            <div class="info">
+              <div>
+                <i class="fa fa-map-marker"></i>
+                <p>A108 Adam Street<br>New York, NY 535022</p>
+              </div>
+
+              <div>
+                <i class="fa fa-envelope"></i>
+                <p>info@example.com</p>
+              </div>
+
+              <div>
+                <i class="fa fa-phone"></i>
+                <p>+1 5589 55488 55s</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+            <div class="form">
+              <div id="sendmessage">Your message has been sent. Thank you!</div>
+              <div id="errormessage"></div>
+              <form action="" method="post" role="form" class="contactForm">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validation"></div>
+                </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
     </div>
-  </nav>
-</nav>
-<br><br><br><br><br>
-<main id="main">
 
-  <!--========================== Profile Section ============================-->
-  <section id="profile">
     <div class="container">
-      <div class="row about-container">
+      <div class="copyright">
+        &copy; Copyright <strong>Regna</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
+        -->
+        Bootstrap Templates by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
 
-        <div class="col-lg-6 content order-lg-1 order-2">
-          <h2 class="title">Complete your profile</h2>
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-          <p>
-            <h2>Please answer these following questions :
-            </h2>
-          </p >
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
 
-          <p>
-            <script>
-              $(document).ready(function () {
-                $('select').select();
-              });
-            </script>
-            1. Select your price range :<br>
-            <select name="price">
-              <option value="Very cheap">Very cheap</option>
-              <option value="Cheap">Cheap</option>
-              <option value="Normal">Normal</option>
-              <option value="Expensive">Expensive</option>
-              <option value="Very expensive">Very expensive</option>
-            </select>
-          </p>
-          <p>
-            2.What kind of housing are you looking for?<br>
-            <select name="housing">
-              <option value="T1">T1</option>
-              <option value="T2">T2</option>
-              <option value="T3">T3</option>
-              <option value="T4">T4</option>
-              <option value="T5">T5</option>
-              <option value="T6">T6</option>
-              <option value="House">House</option>
-            </select>
-          </p >
-          <p>
-            3.What surface would you like ?<br>
-            <select name="Surface">
-              <option value="<10m²"><10m²</option>
-<option value=" [10m²;="[10m²;" 20m²]"="20m²]"">[10m²; 20m²]</option>
-              <option value="[20m²; 50m²]">[20m²; 50m²]</option>
-              <option value="[50m²; 100m²]">[50m²; 100m²]</option>
-              <option value="[100m²; 150m²]">[100m²; 150m²]</option>
-              <option value="[150m²; 200m²]">[150m²; 200m²]</option>
-              <option value="[200m²; 300m²]">[200m²; 300m²]</option>
-              <option value="[>300m²]">[>300m²]</option>
-            </select>
-          </p >
-          <p>
-            <a href="/map" class="blue darken-1 btn waves-effect waves-light">Search</a>
-          </p>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

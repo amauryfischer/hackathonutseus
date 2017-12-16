@@ -1,9 +1,7 @@
 <style>
-#mylist {
-  margin: 2em;
-  margin-right: 0em;
-  margin-left: 3em;
-}
+  #mylist {
+    margin: 2em 0 2em 3em;
+  }
   /*scroll effect*/
   .navbar-trans {
     background-color: transparent;
@@ -97,48 +95,6 @@
   <%= javascript_include_tag 'leaflet_draw/leaflet.draw.js' %>
   <%= javascript_include_tag 'home/mainmenu.js' %>
 </head>
-<nav class="blue navbar navbar-default navbar-doublerow navbar-trans navbar-fixed-top">
-  <!-- down nav -->
-  <nav class="blue navbar navbar-down">
-    <div class="container">
-      <div class="flex-container">
-        <ul class="nav navbar-nav flex-item hidden-xs">
-          <li>
-            <a href="#">Projects</a>
-          </li>
-          <li>
-            <a href="#">Pricing</a>
-          </li>
-          <li>
-            <a href="#">TheTeam</a>
-          </li>
-        </ul>
-        <!-- dropdown only moblie -->
-        <div class="dropdown visible-xs pull-right">
-          <button class="btn btn-default dropdown-toggle " type="button" id="dropdownmenu" data-toggle="dropdown">
-            <span class="glyphicon glyphicon-align-justify"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li>
-              <a href="#">Projects</a>
-            </li>
-            <li>
-              <a href="#">Pricing</a>
-            </li>
-            <li>
-              <a href="#">TheTeam</a>
-            </li>
-            <li role="separator" class="divider"></li>
-            <li>
-              <a href="#">contact us</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-</nav>
-<br><br><br><br><br>
 
 <div class="row">
   <div class="col-md-6">
@@ -147,9 +103,9 @@
   <div class="col-md-6">
 
     <script>
-    $(document).ready(function(){
-      $('.collapsible').collapsible();
-    });
+      $(document).ready(function () {
+        $('.collapsible').collapsible();
+      });
     </script>
     <ul id="mylist" class="collapsible" data-collapsible="accordion">
       <li>

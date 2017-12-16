@@ -12,4 +12,8 @@ class HomeController < ApplicationController
       format.js
     end
   end
+
+  def profile
+    render template: "home/profile"
+  end
 end
