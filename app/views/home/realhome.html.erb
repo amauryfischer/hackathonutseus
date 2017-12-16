@@ -47,8 +47,8 @@
 
       <nav style="position: absolute;color:rgba(238,110,115,0);background-color:transparent;box-shadow:none" id="nav-menu-container">
         <ul id="amaury" class="right nav-menu">
-          <li class="menu-active"><a href="#hero">Home</a></li>
-          <li><a href="/map">window</a></li>
+          <li class="menu-active"><a href="/home">Home</a></li>
+          <li><a onclick='window.location.href = window.location.origin + "/map"' href="/map">window</a></li>
           <li><a href="/profile">Profile</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -139,6 +139,9 @@
         </div>
       </div>
 
+      <p style="text-align:center">
+      <img class="responsive-img center img" src="img/1069734025.jpg"/>
+    </p>
       <div id="google-map" data-latitude="40.713732" data-longitude="-74.0092704"></div>
 
       <div class="container wow fadeInUp">
