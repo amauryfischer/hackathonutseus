@@ -1,0 +1,187 @@
+<style>
+  /*scroll effect*/
+  .navbar-trans {
+    background-color: transparent;
+    border: none;
+    transition: top 1s ease;
+  }
+
+  /*double row*/
+  .navbar-doublerow > .navbar {
+    display: block;
+    padding: 0 auto;
+    margin: 0 auto;
+    min-height: 25px;
+  }
+  .navbar-doublerow .nav {
+    padding: 0 auto;
+  }
+  .navbar-doublerow .dividline {
+    margin: 5px 100px;
+    padding-top: 1px;
+    background-color: inherit;
+  }
+  /*top nav*/
+  .navbar-doublerow .navbar-top ul > li > a {
+    padding: 10px auto;
+    font-size: 12px;
+  }
+  /*down nav*/
+  .navbar-doublerow .navbar-down .navbar-brand {
+    padding: 0 auto;
+    float: left;
+    color: #fff;
+    font-size: 32px;
+  }
+  .navbar-doublerow .navbar-down ul > li > a {
+    font-size: 16px;
+    color: #fff;
+    transition: border-bottom 0.2s ease-in , transform 0.2s ease-in-out;
+  }
+  .navbar-doublerow .navbar-down ul > li > a:hover {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+  }
+  .navbar-doublerow .navbar-down .dropdown {
+    padding: 5px;
+    color: #000;
+  }
+  .navbar-doublerow .navbar-down .dropdown ul > li > a,
+  .navbar-doublerow .navbar-down .dropdown ul > li > a:hover {
+    color: #000;
+    border-bottom: none;
+  }
+  .navbar-doublerow.navbar-trans.afterscroll {}
+  .navbar-doublerow.navbar-trans.afterscroll {
+    top: -50px;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex-item {}
+  /*text*/
+  .text-white,
+  .text-white-hover:hover {
+    color: #fff!important;
+  }
+  /*fontcolor*/
+  .light-grey {
+    color: #000!important;
+    background-color: #E6E9ED!important;
+  }
+</style>
+
+<script>
+  // toggle class scroll
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+      $('.navbar-trans').addClass('afterscroll');
+    } else {
+      $('.navbar-trans').removeClass('afterscroll');
+    }
+
+  });
+</script>
+
+<nav class="blue navbar navbar-default navbar-doublerow navbar-trans navbar-fixed-top">
+  <!-- down nav -->
+  <nav class="blue navbar navbar-down">
+    <div class="container">
+      <div class="flex-container">
+        <ul class="nav navbar-nav flex-item hidden-xs">
+          <li>
+            <a href="#">Projects</a>
+          </li>
+          <li>
+            <a href="#">Pricing</a>
+          </li>
+          <li>
+            <a href="#">TheTeam</a>
+          </li>
+        </ul>
+        <!-- dropdown only moblie -->
+        <div class="dropdown visible-xs pull-right">
+          <button class="btn btn-default dropdown-toggle " type="button" id="dropdownmenu" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-align-justify"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">Projects</a>
+            </li>
+            <li>
+              <a href="#">Pricing</a>
+            </li>
+            <li>
+              <a href="#">TheTeam</a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li>
+              <a href="#">contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</nav>
+<br><br><br><br><br>
+<main id="main">
+
+  <!--========================== Profile Section ============================-->
+  <section id="profile">
+    <div class="container">
+      <div class="row about-container">
+
+        <div class="col-lg-6 content order-lg-1 order-2">
+          <h2 class="title">Complete your profile</h2>
+
+          <p>
+            <h2>Please answer these following questions :
+            </h2>
+          </p >
+
+          <p>
+            <script>
+              $(document).ready(function () {
+                $('select').select();
+              });
+            </script>
+            1. Select your price range :<br>
+            <select name="price">
+              <option value="Very cheap">Very cheap</option>
+              <option value="Cheap">Cheap</option>
+              <option value="Normal">Normal</option>
+              <option value="Expensive">Expensive</option>
+              <option value="Very expensive">Very expensive</option>
+            </select>
+          </p>
+          <p>
+            2.What kind of housing are you looking for?<br>
+            <select name="housing">
+              <option value="T1">T1</option>
+              <option value="T2">T2</option>
+              <option value="T3">T3</option>
+              <option value="T4">T4</option>
+              <option value="T5">T5</option>
+              <option value="T6">T6</option>
+              <option value="House">House</option>
+            </select>
+          </p >
+          <p>
+            3.What surface would you like ?<br>
+            <select name="Surface">
+              <option value="<10m²"><10m²</option>
+<option value=" [10m²;="[10m²;" 20m²]"="20m²]"">[10m²; 20m²]</option>
+              <option value="[20m²; 50m²]">[20m²; 50m²]</option>
+              <option value="[50m²; 100m²]">[50m²; 100m²]</option>
+              <option value="[100m²; 150m²]">[100m²; 150m²]</option>
+              <option value="[150m²; 200m²]">[150m²; 200m²]</option>
+              <option value="[200m²; 300m²]">[200m²; 300m²]</option>
+              <option value="[>300m²]">[>300m²]</option>
+            </select>
+          </p >
+          <p>
+            <a href="/map" class="blue darken-1 btn waves-effect waves-light">Search</a>
+          </p>
