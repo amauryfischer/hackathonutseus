@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get '/map' => "home#mainpage"
   get '/home/fetchflat' => "home#fetchflat"
 
+  get '/hackathonmock' => "fetcher#hackathonmock"
   get '/gather/:lat/:lng' => "fetcher#specificflat"
   get '/fetcharea' => "fetcher#area"
 

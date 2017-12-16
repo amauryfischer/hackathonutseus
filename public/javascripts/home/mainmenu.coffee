@@ -10,7 +10,9 @@ map = null
         rectangle = L.rectangle([[element[1],element[0]],[element[1]+0.005,element[0]+0.005]], {color: "red", weight: 0.7}).addTo(map);
         onRectangleClick =(e) ->
             M.toast({html: 'You click on rectange'})
-            $.ajax(url: "/gather/"+element[1]*1000+"/"+element[0]*1000).done (html) ->
+            #$.ajax(url: "/gather/"+element[1]*1000+"/"+element[0]*1000).done (html) ->
+            $.ajax(url: "/hackathonmock").done (html) ->
+              $("#mylist").html("")
               html.forEach (versa, i) ->
                 $("#mylist").append('<li>'+
                         '<div class="collapsible-header">'+
@@ -33,17 +35,5 @@ map = null
         #  '</div>'
         #).addTo(this.map)
       #eval(js) the code is already evaledk
-    circle = L.circle([31.3193561718426,121.34392735101], {
-      color: 'red',
-      fillColor: '#f03',
-      fillOpacity: 0.5,
-      radius: 500
-    }).addTo(map);
-
-    onCircleClick =(e) ->
-        M.toast({html: 'You click on circle'})
-        $.ajax(url: "/home/fetchflat").done (html) ->
-          #eval(html)
-    circle.on('click', onCircleClick);
   return
 ).call this

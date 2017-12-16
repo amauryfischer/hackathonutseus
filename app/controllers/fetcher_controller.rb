@@ -13,7 +13,10 @@ class FetcherController < ApplicationController
         result.push f
       end
     end
-    byebug
     render json: result[0..10].to_json #if result.count <= 10
+  end
+
+  def hackathonmock
+    render json: [Flat.first,Flat.second,Flat.third,Flat.fourth,Flat.fifth,Flat.last].to_json
   end
 end
