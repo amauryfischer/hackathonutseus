@@ -61,16 +61,17 @@ class Victorizateur < ApplicationRecord
     new_csv
   end
 
-  def self.fetch_location(lat:,lng:)
+  def self.fetch_location(zoom:)
     @max_lat = 31.4
     @min_lat = 30.4
     @max_lng = 121.1
     @min_lng = 121.5
     @distance = 80
-    file = File.open("/home/amauey/hackathonutseus/data/lieux_subway_output.csv")
-    csv = file.read
-    file.close
-    parsed_csv = CSV.parse csv
-    byebug
+    parsed_csv = clean_csv "/home/amauey/hackathonutseus/data/lieux_subway.csv"
+    selected_area = []
+    parsed_csv.each do |line|
+      selected_area.push([line[0],line[1]]) if line[2].to_i >= zoom
+    end
+    selected_area
   end
 end

@@ -21,6 +21,10 @@ Rails.application.routes.draw do
   get '/map' => "home#mainpage"
   get '/home/fetchflat' => "home#fetchflat"
 
+  get '/gather/:lat/:lng' => "fetcher#specificflat"
+  get '/fetcharea' => "fetcher#area"
+
+
 
   get '/' => redirect("/home")
   get "*path" => redirect("/home")
